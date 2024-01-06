@@ -18,15 +18,15 @@ The tool can be run using the following arguments:
 Example:
 	<pre>java -jar extractData.jar -dateFrom "2017-5-12T00:00:00" -dateTo "2017-5-12T12:00:00" -files ./zenodoFiles/ -filter selectByDate.q -output sampleData -process all</pre>
  
-The arguments in the above example will process both synopses and raw data stored in `./zenodoFiles/` within the temporal window `[2017-5-12T00:00:00, 2017-5-12T12:00:00]`, that satisfy the SPARQL query stored in the file `selectByDate.q`. The output will be stored in files `sampleDataRaw.tsv` and `sampleDataSynopses.tsv`. The file `selectByDate.q` contains the following SPARQL query:
+The configuration in the above example instructs the tool to process both synopses and raw data (`-process all`) stored in `./zenodoFiles/` within the temporal window `[2017-5-12T00:00:00, 2017-5-12T12:00:00]`, that satisfy the SPARQL query stored in the file `selectByDate.q`. The output will be stored in the files `sampleDataRaw.tsv` and `sampleDataSynopses.tsv` (output `sampleData` appended with `Raw.tsv` and `Synopses.tsv` respectively). The file `selectByDate.q` contains the following SPARQL query:
 
 <pre>
-PREFIX s: <http://www.unipi.gr/dataExtraction/spatial#>
-PREFIX t: <http://www.unipi.gr/dataExtraction/temporal#>
-PREFIX txt: <http://www.unipi.gr/dataExtraction/textual#>
-PREFIX ogc:     <http://www.opengis.net/ont/geosparql#>
-PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#> 
-PREFIX :     <http://www.vesselAI-project.eu/ontology#>
+PREFIX s: &lt;http://www.unipi.gr/dataExtraction/spatial#&gt;
+PREFIX t: &lt;http://www.unipi.gr/dataExtraction/temporal#&gt;
+PREFIX txt: &lt;http://www.unipi.gr/dataExtraction/textual#&gt;
+PREFIX ogc:     &lt;http://www.opengis.net/ont/geosparql#&gt;
+PREFIX xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX :     &lt;http://www.vesselAI-project.eu/ontology#&gt;
 
 SELECT ?tr (xsd:string(?wktOGC) as ?wkt) (xsd:string(?dateTime) as ?dtime) ?heading ?speed ?temperature ?min3hTemp ?max3hTemp ?pressure ?relHumidity ?windGust ?visibility ?dewpoint ?precipitation ?uWind ?vWind ?mathWindDir ?meteoWindDir (txt:fragment(?a) as ?annotation)
 WHERE{
