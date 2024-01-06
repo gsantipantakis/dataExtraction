@@ -62,7 +62,7 @@ Finally, the data extraction tool extends the SPARQL 1.1 set of functions to sim
        		   during("2017-5-15T14:30:00", "2017-5-12T00:00:00", "2017-5-17T00:00:00") 
        		      returns true.
  	<http://www.unipi.gr/dataExtraction/textual#fragment>: 
-  		returns the fragment identifier of a given URI. 
+  		returns the fragment identifier of the given URI. 
   		Example:
     		   fragment(<http://www.vesselAI-project.eu/ontology#STOP>) 
     		      returns "STOP".
