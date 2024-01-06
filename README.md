@@ -50,7 +50,7 @@ WHERE{
 
 Please notice that `###FROM###,###TO###` are placeholders that will be automatically replaced by the boundaries of the temporal window specified by the user at command line. 
 
-Finally, the data extraction tool extends the SPARQL 1.1 set of functions to simplify the data extraction process. In the above example the function `t:during/3` is not a SPARQL 1.1 function, but it is available in the extension provided by the tool. The extension currently includes the following functions:
+Finally, the data extraction tool extends the SPARQL 1.1 set of functions to simplify the data extraction process. In the above example the function `t:during/3` is not a SPARQL 1.1 function, and it is available in the extension provided by the tool. The extension currently includes the following functions:
 
 	<http://www.unipi.gr/dataExtraction/temporal#during>: returns true if a time instant is within a 
  		specified time interval. It takes three dateTime literal arguments where the first is the 
