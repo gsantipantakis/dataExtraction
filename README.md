@@ -58,18 +58,21 @@ Finally, the data extraction tool extends the SPARQL 1.1 set of functions to sim
  		returns true if a time instant is within a specified time interval. It takes 
    		three dateTime literal arguments where the first is the time instant to be 
      		tested, the second and third arguments define the time interval. 
-     		Example: during("2017-5-15T14:30:00", "2017-5-12T00:00:00", "2017-5-17T00:00:00") 
-       			returns true.
+     		*Example:* 
+       			during("2017-5-15T14:30:00", "2017-5-12T00:00:00", "2017-5-17T00:00:00") 
+       				returns true.
  	<http://www.unipi.gr/dataExtraction/textual#fragment>: 
   		returns the fragment identifier of a given URI. 
-  		Example: fragment(<http://www.vesselAI-project.eu/ontology#STOP>) 
-    			returns "STOP".
+  		*Example:* 
+    			fragment(<http://www.vesselAI-project.eu/ontology#STOP>) 
+    				returns "STOP".
 	<http://www.unipi.gr/dataExtraction/spatial#within>: 
  		returns true if the geometry specified in the first argument is topologically within
    		the geometry specified within the geometry specified in the second argument. 
      		Geometries are provided as OGC literals or plain WKT strings. 
-     		Example: within("POINT(1 1)","POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))") 
-       			returns true.
+     		*Example:* 
+       			within("POINT(1 1)","POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))") 
+       				returns true.
 
 
 **Acknowledgement**
