@@ -53,7 +53,7 @@ Please notice that `###FROM###,###TO###` are placeholders that will be automatic
 Finally, the data extraction tool extends the SPARQL 1.1 set of functions to simplify the data extraction process. In the above example the function `t:during/3` is not a SPARQL 1.1, but it is available in the extension provided by the tool. The extension currently includes the following functions:
 
 	<http://www.unipi.gr/dataExtraction/temporal#during>: returns true if a time instant is within a specified time interval. It takes three dateTime literal arguments where the first is the time instant to be tested, the second and third arguments define the time interval. Example: during("2017-5-15T14:30:00", "2017-5-12T00:00:00", "2017-5-17T00:00:00") returns true.
- 	 <http://www.unipi.gr/dataExtraction/textual#fragment>: returns the fragment identifier of a given URI. Example: fragment(<http://www.vesselAI-project.eu/ontology#STOP>) returns "STOP".
+ 	<http://www.unipi.gr/dataExtraction/textual#fragment>: returns the fragment identifier of a given URI. Example: fragment(<http://www.vesselAI-project.eu/ontology#STOP>) returns "STOP".
 	<http://www.unipi.gr/dataExtraction/spatial#within>: returns true if the geometry specified in the first argument is topologically within the geometry specified within the geometry specified in the second argument. Geometries are OGC literals or plain WKT strings. Example: within("POINT(1 1)","POLYGON((0 0, 0 2, 2 2, 2 0, 0 0))") returns true.
 
 
