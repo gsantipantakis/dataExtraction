@@ -41,7 +41,8 @@ WHERE{
 			:atmPressureMSL ?pressure; :relativeHumidity ?relHumidity; :windGust ?windGust; 
 			:horVisibility ?visibility; :dewpointTemp ?dewpoint; 
 			:precipitation3H ?precipitation; :u_windComponent ?uWind; 
-			:v_windComponent ?vWind; :mathematicalWindDirection ?mathWindDir; :meteoWindDirection ?meteoWindDir ] .
+			:v_windComponent ?vWind; :mathematicalWindDirection ?mathWindDir; 
+			:meteoWindDirection ?meteoWindDir ] .
 	?t :hasTimeStart ?dateTime .
 	OPTIONAL{?p :hasAnnotation ?a}.
 	FILTER(t:during(?dateTime,###FROM###,###TO###))
