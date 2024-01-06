@@ -18,7 +18,7 @@ The tool can be run using the following arguments:
 Example:
 	<pre>java -jar extractData.jar -dateFrom "2017-5-12T00:00:00" -dateTo "2017-5-12T12:00:00" -files ./zenodoFiles/ -filter selectByDate.q -output sampleData -process all</pre>
  
-The arguments in the above example will process both synopses and raw data stored in <pre>./zenodoFiles/</pre> within the temporal window <pre>[2017-5-12T00:00:00, 2017-5-12T12:00:00]</pre>, that satisfy the SPARQL query stored in the file <pre>selectByDate.q</pre>. The output will be stored in files <pre>sampleDataRaw.tsv</pre> and <pre>sampleDataSynopses.tsv</pre>. The file <pre>selectByDate.q</pre> contains the following SPARQL query:
+The arguments in the above example will process both synopses and raw data stored in `./zenodoFiles/` within the temporal window `[2017-5-12T00:00:00, 2017-5-12T12:00:00]`, that satisfy the SPARQL query stored in the file `selectByDate.q`. The output will be stored in files `sampleDataRaw.tsv` and `sampleDataSynopses.tsv`. The file `selectByDate.q` contains the following SPARQL query:
 
 <pre>
 PREFIX s: <http://www.unipi.gr/dataExtraction/spatial#>
